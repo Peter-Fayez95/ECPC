@@ -31,19 +31,19 @@ nCr.cc	Inverse MOD / nCr mod p
 #FFT_new.cc	Fast Fourier transform
 #Simplex.cc	Simplex algorithm
 #FFT.cc	Fast Fourier transform (C++)
-sieve.cc	Sieve / SPF
+Sieve.cc	Sieve / SPF
 EulerPhi.cc	Euler Totient Functio
 Miller.cc	Miller-Rabin (Deterministic)
 
 
 [Graph algorithms]
-BellmanFord.cc	Bellman-Ford shortest paths with negative edge weights (C++)
 #DijkstraFloyd.cc	Dijkstra and Floyd's algorithm (C++)
 #FastDijkstra.cc	Fast Dijkstra's algorithm
 #SCC.cc	Strongly connected components
 #EulerianPath.cc	Eulerian path
 #Kruskal.cc	Kruskal's algorithm
 #Prim.cc	Minimum spanning trees
+BellmanFord.cc	Bellman-Ford shortest paths with negative edge weights (C++)
 TopologicalSort.cc	Topological-Sort
 Dijkstra.cc	Dijkstra shortest paths
 FloydWarshall.cc	Floyd-Warshall all-pairs shortest paths
