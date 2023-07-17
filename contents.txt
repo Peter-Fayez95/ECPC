@@ -34,6 +34,7 @@ nCr.cc	Inverse MOD / nCr mod p
 Sieve.cc	Sieve / SPF
 EulerPhi.cc	Euler Totient Functio
 Miller.cc	Miller-Rabin (Deterministic)
+facors_functions.cc  Functions related to factors
 
 
 [Graph algorithms]
@@ -60,7 +61,9 @@ TreeDiameter.cc	tree diameter DFS
 #SegmentTreeLazy.java	Lazy segment tree
 #LCA.cc	Lowest common ancestor
 UnionFind.cc	Union-Find
+UnionFind_OOP.cc  Union-Find-OOP
 SegTree.cc	Segment Tree (range-minimum queries)
+SegTree_OOP.cc  Segment Tree - OOP
 FenwickTree.cc	Fenwick Tree (range-sum/update queries)
 
 [Miscellaneous]
