@@ -13,7 +13,7 @@ struct line {
 
     array<T, 3> equation() {
         // get equation ax+by+c=0
-        return {-v.y, v.x, c};
+        return {v.y, -v.x, c};
     }
 
     T side(pt p) {
