@@ -1,7 +1,11 @@
 
 struct line {
-    pt v; T c;
+    pt v, p, q; T c;
 
+    /*
+        TODO: Generate the two points P and Q on line from the 3 definitions
+        see https://github.com/ShahjalalShohag/code-library/blob/master/Geometry/Geometry%202D.cpp (line 87)
+    */
     // From direction vector v and offset c
     line(pt v, T c): v(v), c(c) {}
 
