@@ -1,6 +1,7 @@
 //Input
 using namespace std;
 string line;
+cin.ignore() // only once before first getline and after last cin
 getline(cin,line);
 
 
