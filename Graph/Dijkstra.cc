@@ -25,7 +25,7 @@ void dijkstra(int s) {
         
         vis[a] = 1;
         for (auto &[b, w]:adj[a]) {
-            if (dist[a] < dist[b] + w) {
+            if (dist[a] + w < dist[b]) {
                 dist[b] = dist[a] + w;
                 q.push({-dist[b], b});
             }
