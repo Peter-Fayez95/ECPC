@@ -3,7 +3,7 @@ using namespace std;
 
 # define INF 10000000
 int n, dist[200001];
-vector<pair<int,int>, int> edges;
+map<pair<int,int>, int> edges;
 
 //shortest path from starting node to all nodes
 //detects negative cycles
