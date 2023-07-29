@@ -8,6 +8,7 @@ int n, q, arr[N], table[K + 1][N], lg[N];
 
 // works in O(1) for idempotent functions
 // idempotent functions/operators: f(x, x) = x
+// Examples: min, max, &, |
 int fun(int a1, int a2) {
     return min(a1, a2);
 }
