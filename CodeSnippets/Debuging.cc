@@ -8,4 +8,6 @@
 //Checking for Out of Bounds
 // use vector::at() instead of vector::operator[]
 
+//slice a container in debugger watch
+// (int[6])*arr
 
