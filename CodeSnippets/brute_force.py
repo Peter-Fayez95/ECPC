@@ -24,4 +24,4 @@ with open("input.txt", 'r') as f1, open("output.txt", 'r') as f2:
         ans2 = brute_force_check(n, lst)
 
         if ans1 != ans2:
-            print(f"Wrong answer on test {i}: Expected ({ans1}), Found({ans2})\n")
+            print(f"Wrong answer on test {i}: Expected ({ans2}), Found({ans1})\n")
