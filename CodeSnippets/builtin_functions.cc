@@ -15,3 +15,5 @@ cout << __lg(x); // 12
 
 // to replace rand
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
+mt19937_64 rng64(chrono::steady_clock::now().time_since_epoch().count());
+shuffle(permutation.begin(), permutation.end(), rng);
