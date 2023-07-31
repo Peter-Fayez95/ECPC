@@ -13,3 +13,5 @@ cout << __builtin_parity(x); // 1
 cout << __builtin_ffs(x); // 5
 cout << __lg(x); // 12 
 
+// to replace rand
+mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
