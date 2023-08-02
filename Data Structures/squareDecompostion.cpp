@@ -2,7 +2,7 @@
 
 using namespace std;
 int const N = 2e5 + 10;
-int n, q, sizeBlock;
+int n, sizeBlock;
 int arr[N], squareDec[N];
 
 void update(int pos, int val) {
@@ -42,21 +42,5 @@ void process() {
             ++p;
         // logic 
         squareDec[p] = min(squareDec[p], arr[i]);
-    }
-}
-
-void solve() {
-    cin >> n >> q;
-    for (int i = 0; i < n; ++i) {
-        cin >> arr[i];
-        //init value
-        squareDec[i] = INT_MAX;
-    }
-    process();
-    for (int i = 0; i < q; ++i) {
-        int l, r;
-        cin >> l >> r;
-        --l, --r;
-        cout << query(l, r) << '\n';
     }
 }
