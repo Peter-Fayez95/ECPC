@@ -15,22 +15,12 @@ comparator.cc
 pragma.cpp
 brute_force.py
 
-[Combinatorial optimization]
-nCr.cc	Inverse MOD / nCr mod p
-
-[Geometry]
-points-vectors.cc  Points/Vectors
-segment.cc  Line Segments
-straight_line.cc  Straigt Lines
-polygons.cc  Polygons
-
 [Numerical algorithms]
 Sieve.cc	Sieve / SPF
 factors_functions.cc  Functions related to factors
 ExtendedGCD.cc
 EulerPhi.cc	Euler Totient Function
 Miller.cc	Miller-Rabin (Deterministic)
-
 
 [Graph algorithms]
 TreeDiameter.cc	tree diameter DFS
@@ -48,3 +38,12 @@ SegTree.cc	Segment Tree (range-minimum queries)
 SegTree_OOP.cc  Segment Tree - OOP
 FenwickTree.cc	Fenwick Tree (range-sum/update queries)
 Sparse_Table.cc  Sparse-Table
+
+[Combinatorics]
+nCr.cc	Inverse MOD / nCr mod p
+
+[Geometry]
+points-vectors.cc  Points/Vectors
+segment.cc  Line Segments
+straight_line.cc  Straigt Lines
+polygons.cc  Polygons
