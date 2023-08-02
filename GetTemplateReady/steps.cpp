@@ -10,4 +10,5 @@
 
 3- every time you want to create a new code for a new submission for a problem, duplicte the main.cpp in that folder, rename to a number and work on the main.cpp
 4- do not add any <number>.cpp to cmakelist
+5- add <txt.in>, and <txt.out> to each problem's cmake-build-debug folder
 */
