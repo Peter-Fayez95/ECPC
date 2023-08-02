@@ -61,17 +61,6 @@ T orientedAngle(pt a, pt b, pt c) {
     else return 2*pi - angle(b-a, c-a);
 }
 
-bool isConvex(vector<pt> points) {
-    /*check if polygon is convex*/
-    bool hasPos = 0, hasNeg = 0;
-    int n = points.size();
-    for (int i=0; i<n; i++) {
-        int o = orient(points[i], points[(i+1)%n], points[(i+2)%n]);
-        if (o > 0) hasPos=1;
-        else if (o < 0) hasNeg=1;
-    }
-    return !(hasPos && hasNeg);
-}
 
 bool upper_half(pt p) {
     /*check if vector is in first two quadrants (i.e. upper half)*/
