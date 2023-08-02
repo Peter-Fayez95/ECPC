@@ -1,10 +1,10 @@
 /*
 * in the current directory, create a new project inside a new folder called template using clion if a project does not already exist, and open it
 * in your main.cpp write you template code
-* in clion terminal write
+* go to the parent dirc of the template project, "cd .." in clion terminal write
 
-1- to create
-*  for letter in {a..z}; do echo $letter; mkdir $letter; cp -R \template  $letter; done;
+1- to create folders from a to z that contains all files from template folder
+*   for letter in {a..z}; do echo $letter; mkdir $letter; cp -r template/*  $letter; done;
 
 2- now you have folders a to z with the template code
 
