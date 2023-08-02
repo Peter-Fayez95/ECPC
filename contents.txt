@@ -4,10 +4,10 @@
 #   [filename within code directory][tab character \t][subsection title]
 
 [Template and Start]
-main.cc  Main Template
+steps.cc  Ubuntu Steps
+template.cc  Main Template
 
 [Miscellaneous]
-steps.cc
 Debugging.cc
 IOManipulators.cc
 builtin_functions.cc
