@@ -39,7 +39,7 @@ SegTree_OOP.cc  Segment Tree - OOP
 FenwickTree.cc	Fenwick Tree (range-sum/update queries)
 Sparse_Table.cc  Sparse-Table
 ordered_set.cc  Ordered Set
-Sq_decomposition  Sqrt-Decomposition
+Sq_decomposition.cc  Sqrt-Decomposition
 
 [Combinatorics]
 nCr.cc	Inverse MOD / nCr mod p
