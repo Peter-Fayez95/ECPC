@@ -3,7 +3,7 @@ using namespace std;
 
 
 #define ll long long
-#define all(x) (x).begin(), (x).end()
+#define all(x) x.begin(), x.end()
 #define endl '\n'
 
 #define file                                                                   \
