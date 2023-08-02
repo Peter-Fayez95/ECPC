@@ -17,6 +17,7 @@ brute_force.py
 
 [Numerical algorithms]
 Sieve.cc	Sieve / SPF
+invMod.cc  Inverse MOD
 factors_functions.cc  Functions related to factors
 ExtendedGCD.cc
 EulerPhi.cc	Euler Totient Function
