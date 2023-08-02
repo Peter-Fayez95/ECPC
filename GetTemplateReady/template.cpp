@@ -20,7 +20,7 @@ using namespace std;
   ios_base::sync_with_stdio(false)
 
 int tc;
-const ll N = 1e4 + 10;
+const int N = 1e4 + 10;
 const ll mod = 1e9 + 7;
 
 void pre();
