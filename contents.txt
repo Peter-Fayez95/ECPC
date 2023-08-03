@@ -41,6 +41,7 @@ FenwickTree.cc	Fenwick Tree (range-sum/update queries)
 Sparse_Table.cc  Sparse-Table
 ordered_set.cc  Ordered Set
 Sq_decomposition.cc  Sqrt-Decomposition
+2D_Sparse_Table.cc 2D Sparse Table
 
 [Combinatorics]
 nCr.cc	Inverse MOD / nCr mod p
