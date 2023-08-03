@@ -12,7 +12,7 @@ Debugging.cc
 IOManipulators.cc
 builtin_functions.cc
 comparator.cc
-pragma.cpp
+pragma.cc
 brute_force.py
 
 [Numerical algorithms]
