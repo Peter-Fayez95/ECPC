@@ -21,7 +21,10 @@ int fun(int a1, int a2) {
 int main() {
     compute_logs();
     cin >> n >> q;
-    for (int i=0; i<n; i++) cin>>arr[i];[    
+    for (int i=0; i<n; i++){
+        cin>>arr[i];
+        table[0][i] = arr[i];
+    }
     for (int i=1; i<=K; i++) {
         for (int j=0; j + (1<<i) <= N; j++) {
             table[i][j] = fun(table[i - 1][j], table[i - 1][j + (1 << (i - 1))]);
