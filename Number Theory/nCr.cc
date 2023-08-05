@@ -36,3 +36,12 @@ void pre() {
         fact[i]= (fact[i-1]*i)%p;
     }
 }
+/*
+nCr propreties
+    nCr = (n-1)Cr + (n-1)C(r-1)
+    nCr = (n / r) * (n-1)C(r-1)
+    Summation(over all) nCr = pow(2,n)
+    Summation(over odd) = summation(over even) = pow(2, n-1)
+    Summation(0,n) (2n+1)Ci = pow(2, 2n)
+    Summation(n,2n-1) iCn = (2n)C(n+1)
+*/
