@@ -13,10 +13,22 @@ void polygon_area() {
 }
 
 // Pick's theorem
-int pick_area(int a, int b) {
+int pick_area() {
     // a:  number of integer points inside the polygon
     // b:  number of integer points on the polygon boundary
+    int a = 0, b = 0;
+    count_integer_points(a,b);
     return a + b/2 - 1;
+}
+
+void count_integer_points(int &a, int &b) {
+    T area = polygon_area();
+    for (int i = 0; i < n; i++) {
+        pt z = points[(i+1)%n] - points[i];
+        int gc = gcd(z.x, z.y);
+        b += abs(g);
+    }
+    a = abs(area) + 1 - b/2;
 }
 
 bool isConvex(vector<pt> points) {
