@@ -64,11 +64,22 @@ bool pointInTriangle(pt a, pt b, pt c, pt p) {
     return s1 == s2;
 }
 
+bool check_boundary(int ind, pt p) {
+    int n = seq.size();
+    p += translation;
+    pt a = seq[ind] + translation, b = seq[ind + 1] + translation;
+    if (ind + 1 == n - 1) {
+        return onSegment(a, b, p) || onSegment(b, translation, p);
+    }
+    return onSegment(a, b, p);
+}
+
 // check if point is in polygon O(log n)
+// call prepare() before doing any queries
 bool point_in_polygon(pt point) {
     // translate according to p0
     point = point - translation;
-    
+    int n = seq.size();
     if (cross(seq[0], point) != 1 &&
             sgn(cross(seq[0], point)) != sgn(cross(seq[0], seq[n - 1])))
         return false;
@@ -89,6 +100,9 @@ bool point_in_polygon(pt point) {
             r = mid;
     }
     int pos = l;
-    return pointInTriangle(seq[pos], seq[pos + 1], pt{0, 0}, point);
+    // on boundary
+    if (check_boundary(pos, point)) return 1e9;
 
+    return pointInTriangle(seq[pos], seq[pos + 1], pt{0, 0}, point);
 } 
+
