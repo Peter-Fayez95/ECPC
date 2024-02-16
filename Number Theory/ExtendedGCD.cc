@@ -14,3 +14,16 @@ int extendedGCD(int a, int b, int& x, int& y) {
     y = x1 - y1 * (a / b);
     return d;
 }
+
+bool find_any_solution(int a, int b, int c, int &x0, int &y0, int &g) {
+    g = extendedGCD(abs(a), abs(b), x0, y0);
+    if (c % g) {
+        return false;
+    }
+
+    x0 *= c / g;
+    y0 *= c / g;
+    if (a < 0) x0 = -x0;
+    if (b < 0) y0 = -y0;
+    return true;
+}
