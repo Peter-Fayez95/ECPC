@@ -1,2 +1,2 @@
 # ECPC
-E-JUST Egyptian Collegiate Programming Contest (ACPC) team notebook.
+E-JUST Africa and Arab Collegiate Programming Contest (ACPC) team notebook.
