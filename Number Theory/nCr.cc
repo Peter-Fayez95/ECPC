@@ -3,6 +3,7 @@ typedef ll long long
 
 const int MAX_N = 100010;
 const int p = 1e9 + 7;
+ll fact[N];
 
 ll binpow(ll n, ll pow, int m) {
     ll res = 1;
