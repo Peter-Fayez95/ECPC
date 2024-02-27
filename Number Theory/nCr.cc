@@ -3,7 +3,7 @@ typedef ll long long
 
 const int MAX_N = 100010;
 const int p = 1e9 + 7;
-ll fact[N];
+int fact[N];
 
 ll binpow(ll n, ll pow, int m) {
     ll res = 1;
@@ -34,7 +34,7 @@ void pre() {
     // n! mod p
     fact[0]=1;
     for (int i=1; i <= MAX_N; i++) {
-        fact[i]= (fact[i-1]*i)%p;
+        fact[i]= (1LL * fact[i-1] * i)%p;
     }
 }
 /*
