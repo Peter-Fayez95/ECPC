@@ -18,3 +18,9 @@ cout << internal << -77; //-***77
 cout << left     << -77; //-77***
 cout << right    << -77; //***-77
 
+// To split string on a space
+string str = "Placeholder Text", tmp;
+stringstream ss(str);
+while(getline(ss, s1, ' ')) {
+    cout << s1 << '\n';
+}
