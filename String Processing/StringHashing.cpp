@@ -28,6 +28,11 @@ ll substring_hash(int i, int j) {
     return hash;
 }
 
+// compute hash value for substring without need for inverse mod
+ll get_hash(int i, int j){
+    return ((hashes[j] - hashes[i - 1] + MOD) * p_pow[n - i + 1]) % MOD;
+}
+
 /* This hash probability is good for one comparison
  * If we compared a string with 1e6 other strings, the collision probability will become 1e-3
  * And if we want to compare 1e6 different strings with each other,
