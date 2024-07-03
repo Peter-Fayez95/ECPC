@@ -30,7 +30,7 @@ ll substring_hash(int i, int j) {
 
 // compute hash value for substring without need for inverse mod
 ll get_hash(int i, int j){
-    return ((hashes[j] - hashes[i - 1] + MOD) * p_pow[n - i + 1]) % MOD;
+    return (1ll * (hashes[j] - hashes[i - 1] + MOD) * p_pow[n - i + 1]) % MOD;
 }
 
 /* This hash probability is good for one comparison
