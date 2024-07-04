@@ -64,7 +64,7 @@ struct line {
 
     pair<pt, pt> get_points() { 
         // extract any two points from this line
-		pt p, q; 
+	pt p, q; 
         double a = -v.y, b = v.x; // ax + by = c
 	if (sign(a) == 0) {
 	    p = pt{0, c / b};
