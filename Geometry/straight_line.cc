@@ -2,10 +2,6 @@
 struct line {
     pt v, p, q; T c;
 
-    /*
-        TODO: Generate the two points P and Q on line from the 3 definitions
-        see https://github.com/ShahjalalShohag/code-library/blob/master/Geometry/Geometry%202D.cpp (line 87)
-    */
     // From direction vector v and offset c
     line(pt v, T c): v(v), c(c) {}
 
@@ -65,6 +61,25 @@ struct line {
 
     pt proj(pt p) {return p - perp(v)*side(p)/sq(v);}
     pt refl(pt p) {return p - 2.0*perp(v)*side(p)/sq(v);}
+
+    pair<pt, pt> get_points() { 
+        // extract any two points from this line
+		pt p, q; 
+        double a = -v.y, b = v.x; // ax + by = c
+		if (sign(a) == 0) {
+		    p = pt{0, c / b};
+		    q = PT{1, c / b};
+		}
+		else if (sign(b) == 0) {
+		    p = pt{c / a, 0};
+		    q = pt{c / a, 1};
+		}
+		else {
+		    p = pt{0, c / b};
+		    q = pt{1, (c - a) / b};
+		}
+		return {p, q};
+    }
 
 };
 
