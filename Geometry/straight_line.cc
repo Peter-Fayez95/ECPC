@@ -66,19 +66,19 @@ struct line {
         // extract any two points from this line
 		pt p, q; 
         double a = -v.y, b = v.x; // ax + by = c
-		if (sign(a) == 0) {
-		    p = pt{0, c / b};
-		    q = PT{1, c / b};
-		}
-		else if (sign(b) == 0) {
-		    p = pt{c / a, 0};
-		    q = pt{c / a, 1};
-		}
-		else {
-		    p = pt{0, c / b};
-		    q = pt{1, (c - a) / b};
-		}
-		return {p, q};
+	if (sign(a) == 0) {
+	    p = pt{0, c / b};
+	    q = PT{1, c / b};
+	}
+	else if (sign(b) == 0) {
+	    p = pt{c / a, 0};
+	    q = pt{c / a, 1};
+	}
+	else {
+	    p = pt{0, c / b};
+	    q = pt{1, (c - a) / b};
+	}
+	return {p, q};
     }
 
 };
