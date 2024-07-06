@@ -2,6 +2,8 @@
 struct line {
     pt v, p, q; T c;
 
+    line(): v(), c() {}
+
     // From direction vector v and offset c
     line(pt v, T c): v(v), c(c) {}
 
@@ -21,7 +23,7 @@ struct line {
         P = (x, y)
         side(P) > 0 for positive side (i.e. ax + by - c > 0)
         */
-        return cross(v,p)-c;
+        return cross(v,p) - c;
     }
 
     T dist(pt p) {
@@ -65,10 +67,10 @@ struct line {
     pair<pt, pt> get_points() { 
         // extract any two points from this line
 	pt p, q; 
-        double a = -v.y, b = v.x; // ax + by = c
+    T a = -v.y, b = v.x; // ax + by = c
 	if (sgn(a) == 0) {
 	    p = pt{0, c / b};
-	    q = PT{1, c / b};
+	    q = pt{1, c / b};
 	}
 	else if (sgn(b) == 0) {
 	    p = pt{c / a, 0};
