@@ -1,6 +1,6 @@
 bool inDisk(pt a, pt b, pt p) {
     // true if point p lies on circle whose radius is AB
-    return dot(a-p, b-p) <= 0;
+    return dot(a - p, b - p) <= 0;
 }
 
 bool onSegment(pt a, pt b, pt p) {
@@ -18,8 +18,8 @@ bool properInter(pt a, pt b, pt c, pt d, pt &out) {
     od = orient(a,b,d);
 
     // Proper intersection exists iff opposite signs
-    if (oa*ob < 0 && oc*od < 0) {
-        out = (a*ob - b*oa) / (ob-oa);
+    if (oa * ob < 0 && oc * od < 0) {
+        out = (a * ob - b * oa) / (ob - oa);
         return 1;
     }
     return 0;
@@ -58,7 +58,7 @@ double segPoint(pt a, pt b, pt p) {
             return l.dist(p); 
     }
     // otherwise distance to A or B
-    return min(abs(p-a), abs(p-b)); 
+    return min(abs(p - a), abs(p - b)); 
 }
 
 double segSeg(pt a, pt b, pt c, pt d) {
