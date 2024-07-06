@@ -13,23 +13,31 @@ const T pi = 3.1415926535897;
 T polar_angle(pt v) {
     // get polar angle of v [0, 2pi)
     T angle = arg(v);
-    if (angle<0) angle+=2*pi;
+    if (angle < 0) angle += 2 * pi;
     return angle;
 }
 
-pt translate(pt v, pt p) {return p+v;}
+pt translate(pt v, pt p) {return p + v;}
 
-pt scale(pt c, T factor, pt p) {return c + (p - c)*factor;}
+pt scale(pt c, T factor, pt p) {return c + (p - c) * factor;}
 
-pt rot(pt p, T a) {return p * polar(1.0, a);}
+// rotate the vector by angle th
+pt rot(pt p, T th) {return p * polar(1.0, th);}
 
+// rotate by 90
 pt perp(pt p) {return {-p.y, p.x};}
 
-T sq(pt p) {return p.x*p.x + p.y*p.y;}
 
-T dot(pt v, pt w) {return (conj(v)*w).x;}
+T sq(pt p) {return p.x * p.x + p.y * p.y;}
 
-bool isPerp(pt v, pt w) {return dot(v,w) == 0;}
+// dot product
+T dot(pt v, pt w) {return (conj(v) * w).x;}
+
+// distance between two points
+T dist(pt a, pt b) {return sqrt(p2(abs(a.x - b.x)) + p2(abs(a.y - b.y)));}
+
+// true if two vectors are perpendicular
+bool isPerp(pt v, pt w) {return dot(v, w) == 0;}
 
 T angle(pt v, pt w) {
     /*Value of angle between vector OV and OW*/
@@ -38,27 +46,26 @@ T angle(pt v, pt w) {
     return acos(clamp(dot(v,w) / abs(v) / abs(w), -1.0, 1.0));
 }
 
-T cross(pt v, pt w) {return (conj(v)*w).y;}
+// cross product
+T cross(pt v, pt w) {return (conj(v) * w).y;}
 
 T orient(pt a, pt b, pt c) {
     /*Check the orientation of point C WRT vector AB */
-    return cross(b-a,c-a);
+    return cross(b - a,c - a);
 }
 
 bool inAngle(pt a, pt b, pt c, pt p) {
     /* Check if point P is inside angle <ABC> */
-    assert(orient(a,b,c) != 0);
-    if (orient(a,b,c) < 0) swap(b,c);
-    return orient(a,b,p) >= 0 && orient(a,c,p) <= 0;
+    assert(orient(a, b, c) != 0);
+    if (orient(a, b, c) < 0) swap(b,c);
+    return orient(a, b, p) >= 0 && orient(a,c,p) <= 0;
 }
 
 T orientedAngle(pt a, pt b, pt c) {
-    /*
-    Check the measure of angle formed by
-    rotating from B to C CCW around A
-    */
-    if (orient(a,b,c) >= 0) return angle(b-a, c-a);
-    else return 2*pi - angle(b-a, c-a);
+    /* Check the measure of angle formed by
+    rotating from B to C CCW around A */
+    if (orient(a, b, c) >= 0) return angle(b - a, c - a);
+    else return 2 * pi - angle(b - a, c - a);
 }
 
 
