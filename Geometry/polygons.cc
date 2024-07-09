@@ -120,6 +120,11 @@ int pointInConvexPolygon(pt point) {
     return pointInTriangle(seq[pos], seq[pos + 1], pt{0, 0}, point);
 }
 
+T trigonometric_sense(pt pp, pt p1, pt p2) {
+    return (p1.x - pp.x) * (p2.y - pp.y) -
+           (p2.x - pp.x) * (p1.y - pp.y);
+}
+
 int pointInPolygon(pt point) {
     bool boundary = 0;
     int cnt = 0;
