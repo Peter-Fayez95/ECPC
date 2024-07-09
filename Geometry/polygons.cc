@@ -89,15 +89,15 @@ bool check_boundary(int ind, pt p) {
 // Checks if point is in polygon O(log n)
 // Call prepare() before doing any queries
 // IMPORTANT: Works only for convex polygons
-bool point_in_polygon(pt point) {
+int pointInConvexPolygon(pt point) {
     // translate according to p0
     point = point - translation;
     int n = seq.size();
     if (cross(seq[0], point) != 0 &&
             sgn(cross(seq[0], point)) != sgn(cross(seq[0], seq[n - 1])))
         return false;
-    if (cross(seq[n-1], point) != 0 &&
-            sgn(cross(seq[n-1], point)) != sgn(cross(seq[n-1], seq[0])))
+    if (cross(seq[n - 1], point) != 0 &&
+            sgn(cross(seq[n - 1], point)) != sgn(cross(seq[n - 1], seq[0])))
         return false;
 
     if (cross(seq[0], point) == 0)
@@ -114,8 +114,32 @@ bool point_in_polygon(pt point) {
     }
     int pos = l;
     // on boundary
-    if (check_boundary(pos, point)) return 1e9;
+    if (check_boundary(pos, point))
+        return 1e9;
 
     return pointInTriangle(seq[pos], seq[pos + 1], pt{0, 0}, point);
-} 
+}
+
+int pointInPolygon(pt point) {
+    bool boundary = 0;
+    int cnt = 0;
+    int n = points.size();
+    for (int i = 0; i < n; i++) {
+        int j = (i + 1) % n;
+        if (onSegment(points[i], points[j], point)) {
+            boundary = 1;
+            break;
+        }
+        if (points[i].y <= point.y && point.y < points[j].y &&
+            trigonometric_sense(point, points[i], points[j]) > 0)
+            cnt++;
+        if (points[j].y <= point.y && point.y < points[i].y &&
+            trigonometric_sense(point, points[j], points[i]) > 0)
+            cnt++;
+    }
+    if (boundary) {
+        return -1;
+    }
+    return ((cnt % 2) ? 1 : 0);
+}
 
