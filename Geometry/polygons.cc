@@ -52,7 +52,7 @@ void prepare(vector<pt> &points) {
     int nn = points.size();
 
     // get minimum point
-    int pos = min_element(points.begin(), points.end(), cmpX());
+    int pos = min_element(points.begin(), points.end(), cmpX()) - points.begin();
     
     // make p0 the minimum point
     rotate(points.begin(), points.begin() + pos, points.end());
