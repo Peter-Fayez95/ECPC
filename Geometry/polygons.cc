@@ -125,6 +125,7 @@ T trigonometric_sense(pt pp, pt p1, pt p2) {
            (p2.x - pp.x) * (p1.y - pp.y);
 }
 
+// Checks if point is in polygon O(n)
 int pointInPolygon(pt point) {
     bool boundary = 0;
     int cnt = 0;
