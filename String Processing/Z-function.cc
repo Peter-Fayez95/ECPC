@@ -1,4 +1,4 @@
-// Calculates Z-function for string
+// Calculates Z-function for string in O(n)
 // z[i] is equal to the greatest number of characters starting from the position  
 // i that coincide with the first characters of the string
 vector<int> z_function(string s) {
