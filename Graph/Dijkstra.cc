@@ -8,6 +8,7 @@ map<int,int> adj[200001];
 
 //shortest path from starting node to all nodes
 //doesn't work for graphs with -ve weighted edges
+// Complexity: O(n + m log m)
 void dijkstra(int s) {
     // set distances to INF
     for (int i=1; i<=n; i++) dist[i]=INF;
