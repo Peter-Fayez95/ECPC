@@ -1,7 +1,3 @@
-#include<bits/stdc++.h>
-using namespace std;
-
-
 int succ[1005];
 
 //detect cycle in functional graphs
