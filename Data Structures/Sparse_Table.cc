@@ -8,7 +8,7 @@ int log2_floor(unsigned long long i) {
     return i ? __builtin_clzll(1) - __builtin_clzll(i) : -1;
 }
 // N is array size, K >= ceil(log N)
-const int K=25, N=200005;
+const int K = 25, N = 200005;
 int n, q, arr[N], table[K + 1][N], lg[N];
 
 // works in O(1) for idempotent functions
@@ -22,7 +22,7 @@ int main() {
     compute_logs();
     cin >> n >> q;
     for (int i=0; i<n; i++){
-        cin>>arr[i];
+        cin >> arr[i];
         table[0][i] = arr[i];
     }
     for (int i=1; i<=K; i++) {
