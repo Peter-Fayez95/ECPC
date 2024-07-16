@@ -30,3 +30,9 @@ int euler_totient(int num) {
     }
     return coprimes;
 }
+
+/*
+Fermat Theorem: - x^(m - 1) mod m = 1 (m is prime and x, m are coprime)
+                - x^k mod m = x ^ (k mod (m - 1)) mod m
+Euler Theorem: x^phi(m) mod m = 1 (since phi(m) = m - 1 as m is prime)
+*/
