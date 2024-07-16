@@ -1,6 +1,3 @@
-#include <bits/stdc++.h>
-
-using namespace std;
 /*
  * check if graph contains a Hamiltonian path, visit every vertex once
  * # of vertices must be less than 20 (N <= 20)
