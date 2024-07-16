@@ -2,7 +2,7 @@
 typedef vector<int> vT;
 typedef vector<vector<int>> vvT;
 
-struct Matrix_Expo{
+struct Matrix_Expo {
 
     vvT base;
     int n;
@@ -33,7 +33,7 @@ struct Matrix_Expo{
         for(int i = 0; i < n; ++i)
             rslt[i][i] = 1;
 
-        while(pow > 0){
+        while(pow > 0) {
             if(pow & 1)
                 rslt = matrix_mul(rslt, base);
             base = matrix_mul(base, base);
