@@ -1,6 +1,3 @@
-#include <bits/stdc++.h>
-using namespace std;
-
 class UnionFind { 
     private:
         vector<int> p, rank, setSize; 
