@@ -1,8 +1,7 @@
 //simplest form of DSU
 //rank herustic
 const int N = 2e5;
-int p[N];
-int r[N];
+int p[N], r[N];
 
 void initPandR(){
     for(int i=0;i<N;i++)p[i]=i,r[i]=1;
