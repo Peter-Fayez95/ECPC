@@ -1,12 +1,5 @@
-#include <bits/stdc++.h>
-using namespace std;
-
-#define ll long long
-
-ll n;
-
 // make sure tree size >= 2n
-ll tre[400010];
+ll n, tre[2*N];
 
 //construct tree
 void construct() {
@@ -33,7 +26,6 @@ ll sum(int a, int b) {
     return minm;
 }
  
-
 // query: arr[k] = x
 void change(int k, ll x) {
     k += (n - 1);
