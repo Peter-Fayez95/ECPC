@@ -1,5 +1,3 @@
-#include <bits\stdc++.h>
-using namespace std;
 /*
  check if given substring is palindrome in O(1)
  require O(n) time and O(n) space
