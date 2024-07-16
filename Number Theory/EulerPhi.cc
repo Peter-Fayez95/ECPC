@@ -1,16 +1,13 @@
-#include <bits/stdc++.h>
-using namespace std;
-
-int const N=1e6+1;
+const int N = 1e6 + 5;
 
 //smallest prime factor
-int spf[N];
+int SPF[N];
 
 map<int,int> get_divisors(int num) { 
     map<int, int> mp;
     
     while (num > 1) {
-        mp[spf[num]]++;
+        mp[SPF[num]]++;
         num /= spf[num];
     }
     return mp;
@@ -20,13 +17,13 @@ map<int,int> get_divisors(int num) {
 // where gcd(i, n) = 1 
 int euler_totient(int num) {
     seive();
-    if(spf[num]==num || isprime(num)) 
+    if(SPF[num]==num || isprime(num)) 
         return num-1;
 
     map<int,int> divisors = get_divisors(num);
-    int coprimes=1;
-    for(auto &[k, v]:divisors){
-        coprimes *= binpower(k, v-1)*(k-1);
+    int coprimes = 1;
+    for(auto &[k, v] : divisors){
+        coprimes *= binpower(k, v - 1) * (k - 1);
     }
     return coprimes;
 }
