@@ -1,20 +1,10 @@
 const int MAX_N = 100010, p = 1e9 + 7;
 int fact[N];
 
-ll binpow(ll n, ll pow, int m) {
-    ll res = 1;
-    while (pow)
-        if (pow & 1)res *= n, res %= m, --pow;
-        else n *= n, n %= m, pow >>= 1;
- 
-    return res;
-}
-
 ll inv(ll a) {
     // inverse mod
     return binpow(a, p-2, p);
 }
-
 
 ll nCr(ll n, ll r) {
     // nCr mod p
