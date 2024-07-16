@@ -1,6 +1,3 @@
-#include <bits/stdc++.h>
-using namespace std;
-
 bool vis[N];
 vector<int> rslt, adj[N];
 stack<int> st;
