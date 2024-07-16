@@ -1,17 +1,3 @@
-#include <bits/stdc++.h>
-#define ll unsigned long long
-
-ll binpower(ll base, ll e, ll mod) {
-    ll result = 1;
-    base %= mod;
-    while (e) {
-        if (e & 1)
-            result = (ll)result * base % mod;
-        base = (ll)base * base % mod;
-        e >>= 1LL;
-    }
-    return result;
-}
 
 bool check_composite(ll n, ll a, ll d, int s) {
     ll x = binpower(a, d, n);
