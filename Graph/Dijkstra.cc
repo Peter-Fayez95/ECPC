@@ -1,6 +1,3 @@
-#include <bits/stdc++.h>
-using namespace std;
-
 # define INF 10000000
 int n, dist[200001];
 bool vis[200001];
