@@ -1,8 +1,3 @@
-#include <iostream>
-using namespace std;
-
-#define ll long long
-
 // original array, tree array
 int n, q;
 ll arr[100005], tre[100005];
@@ -11,7 +6,7 @@ ll arr[100005], tre[100005];
 void construct(int k, ll x) {
     while (k <= n) {
         tre[k] += x;
-        k += k&-k;
+        k += k & -k;
     }
 }
 
@@ -38,17 +33,14 @@ void add(int k, ll x) {
 }
 
 int main() {
-    cin>>n>>q;
+    cin >> n >> q;
     for (int i=1; i<=n; i++) {
-        cin>>arr[i];
-        tre[i]=0;
+        cin >> arr[i];
+        tre[i] = 0;
     }
-    for (int i=1; i<=n; i++) {
+    for (int i = 1; i <= n; i++) {
         construct(i, arr[i]);
     }
 
     // process queries O(log n)
 }
-
-
-
