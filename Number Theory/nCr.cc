@@ -1,6 +1,18 @@
 const int MAX_N = 100010, p = 1e9 + 7;
 int fact[N];
 
+ll binpower(ll base, ll e, ll mod) {
+    ll result = 1;
+    base %= mod;
+    while (e) {
+        if (e & 1)
+            result = (ll)result * base % mod;
+        base = (ll)base * base % mod;
+        e >>= 1LL;
+    }
+    return result;
+}
+
 ll inv(ll a) {
     // inverse mod
     return binpow(a, p-2, p);
