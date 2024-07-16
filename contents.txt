@@ -22,6 +22,7 @@ factors_functions.cc  Functions related to factors
 ExtendedGCD.cc
 EulerPhi.cc	Euler Totient Function
 Miller.cc	Miller-Rabin (Deterministic)
+MatrixExponentiation.cc  Mat Expo
 
 [Graph algorithms]
 TreeDiameter.cc	tree diameter DFS
@@ -31,23 +32,35 @@ Dijkstra.cc	Dijkstra shortest paths
 FloydWarshall.cc	Floyd-Warshall all-pairs shortest paths
 Floyd.cc	Functional Graphs cycle-detection
 Kruskal_MST.cc  Minimum Spanning Trees
+HamiltonianPath.cc  Hamiltonian Path check
 
 [Data structures]
 UnionFind.cc	Union-Find
 UnionFind_OOP.cc  Union-Find-OOP
 SegTree.cc	Segment Tree (range-minimum queries)
 SegTree_OOP.cc  Segment Tree - OOP
+SegTree_OOP_RangeUpdate_PointQuery.cc  Range Update - Point Query
 FenwickTree.cc	Fenwick Tree (range-sum/update queries)
 Sparse_Table.cc  Sparse-Table
+2D_Sparse_Table.cc  2D Sparse Table
 ordered_set.cc  Ordered Set
 Sq_decomposition.cc  Sqrt-Decomposition
-2D_Sparse_Table.cc  2D Sparse Table
+Mo.cc  Mo's Algorithm
 
 [Combinatorics]
 nCr.cc	Inverse MOD / nCr mod p
+
+[String Processing]
+KMP.cc  Prefix Function and KMP Algorithm
+StringHashing.cc  Rolling Hash function
+SuffixArray.cc  Suffix Array
+Z-function.cc  Z-function
+manacherAlgorithm.cc  Manacher Algorithm for Palindromes
 
 [Geometry]
 points-vectors.cc  Points/Vectors
 segment.cc  Line Segments
 straight_line.cc  Straigt Lines
 polygons.cc  Polygons
+circle.cc  Circles
+convex_hull.cc  Convex Hull Construction
