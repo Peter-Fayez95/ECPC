@@ -22,7 +22,7 @@ factors_functions.cc  Functions related to factors
 ExtendedGCD.cc
 EulerPhi.cc	Euler Totient Function
 Miller.cc	Miller-Rabin (Deterministic)
-MatrixExponentiation.cc  Mat Expo
+MatrixExponentiation.cc  Matrix Exponentiation
 
 [Graph algorithms]
 TreeDiameter.cc	tree diameter DFS
