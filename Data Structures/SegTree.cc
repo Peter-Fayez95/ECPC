@@ -15,7 +15,7 @@ void construct() {
 // query: sum(a, b)
 // operations supported: +,*,^,&,|,gcd,lcm,min,max
 // or any associative operation
-ll sum(int a, int b) {
+ll query(int a, int b) {
     a += (n - 1); b += (n - 1);
     ll minm = INT64_MAX;
     while (a <= b) {
@@ -27,7 +27,7 @@ ll sum(int a, int b) {
 }
  
 // query: arr[k] = x
-void change(int k, ll x) {
+void update(int k, ll x) {
     k += (n - 1);
     tre[k] = x;
     for (k /= 2; k >= 1; k /= 2) {
