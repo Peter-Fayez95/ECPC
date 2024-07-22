@@ -1,3 +1,22 @@
+void count_sort(vector<int> &Order, vector<int> &Class) {
+    vector<int> cnt(n);
+    for (auto x : Class) {
+        cnt[x]++;
+    }
+    vector<int> Order_new(n);
+    vector<int> pos(n);
+    pos[0] = 0;
+    for (int i = 1; i < n; i++) {
+        pos[i] = pos[i - 1] + cnt[i - 1];
+    }
+    for (auto x : Order) {
+        int i = Class[x];
+        Order_new[pos[i]] = x;
+        pos[i]++;
+    }
+    Order = Order_new;
+}
+
 // Sorts all suffixes of the given string lexicographically
 // Complexity O(n log n)
 vector<int> Suffix_Array(string &text) {
