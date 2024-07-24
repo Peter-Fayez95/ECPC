@@ -5,10 +5,12 @@ struct segTree {
     vector<item> updateOperation;
     vector<item> getOperation;
     
-    //modify if needed
+    //Change these parameters
     item NEUTRAL_ELEMENT = 0;
     item LAZY = LONG_LONG_MAX;
 
+
+    // Change update query here
     // assign b to segment, new sum will be b * seg_len
     item operation_update(item a, item b, int len) {
         // no operation to apply
@@ -19,6 +21,7 @@ struct segTree {
 
     }
 
+    // change get query here
     item operation_get(item a, item b){
         return a + b;
     }
@@ -33,8 +36,6 @@ struct segTree {
         while (size < n)size <<= 1;
         updateOperation.resize(2 * size, 0);
         getOperation.resize(2 * size, 0);
-//        build(0, 0, size);
-
     }
 
     void build(int x, int lx, int rx, vector<int> &a){
