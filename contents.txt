@@ -41,6 +41,7 @@ UnionFind_OOP.cc  Union-Find-OOP
 SegTree.cc	Segment Tree (range-minimum queries)
 SegTree_OOP.cc  Segment Tree - OOP
 SegTree_OOP_RangeUpdate_PointQuery.cc  Range Update - Point Query
+Lazy_Segment_Tree.cc Range Update - Range Query
 FenwickTree.cc	Fenwick Tree (range-sum/update queries)
 Sparse_Table.cc  Sparse-Table
 2D_Sparse_Table.cc  2D Sparse Table
