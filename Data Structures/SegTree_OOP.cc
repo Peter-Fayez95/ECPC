@@ -35,6 +35,22 @@ struct segTree{
         while(size < n) size *= 2;
         vals.resize(2 * size);
     }
+    void build(int x, int lx, int rx, vector<int>&a){
+        if(rx - lx == 1){
+            if(lx < a.size())
+                vals[x] = a[lx];
+            return;
+        }
+        int m = (lx + rx) / 2;
+        build(2 * x + 1, lx, m, a);
+        build(2 * x + 2, m, rx, a);
+        vals[x] = merge(vals[2 * x + 1], vals[2 * x + 2]);
+    }
+
+    void build(vector<int> &a){
+        return build(0, 0, size, a);
+    }
+
     void set(int i, int v, int x, int lx, int rx){
         if(rx - lx == 1) {
             vals[x] = single(v);
