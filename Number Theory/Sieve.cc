@@ -10,7 +10,7 @@ void sieve() {
     for (int i = 3; i * i < N; i += 2) {
         if (SPF[i] == i) {
             for (int j = i * i; j < N; j += 2 * i)
-                SPF[j] = i;
+                SPF[j] = min(i, SPF[j]);
         }
     }
 }
