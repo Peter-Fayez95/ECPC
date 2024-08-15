@@ -34,6 +34,7 @@ Floyd.cc	Functional Graphs cycle-detection
 Kruskal_MST.cc  Minimum Spanning Trees
 HamiltonianPath.cc  Hamiltonian Path check
 LCA_BinaryLifting.cc  LCA - Binary Lifting
+Finding_Bridges.cc Find Bridges in undirected graph
 
 [Data structures]
 UnionFind.cc	Union-Find
