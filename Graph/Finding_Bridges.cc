@@ -32,7 +32,11 @@ void solve() {
         g[u].push_back(v);
         g[v].push_back(u);
     }
-
-    dfs_bridges(1, -1);
+    for(int i = 1; i <= n; ++i){
+        if(!vis[i]){
+            dfs_bridges(i, -1);
+        }
+    
+    }
 
 }
