@@ -1,7 +1,7 @@
 const int MAX_N = 100010, p = 1e9 + 7;
 int fact[N];
 
-ll binpower(ll base, ll e, ll mod) {
+ll binpow(ll base, ll e, ll mod) {
     ll result = 1;
     base %= mod;
     while (e) {
